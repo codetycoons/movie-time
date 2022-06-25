@@ -1,0 +1,35 @@
+.Footer{
+    background-color: black;
+    color : white;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    img{
+        height: 30px;
+    }
+
+    .social{
+        cursor: pointer;
+        margin: .5rem;
+    }
+
+    .copyright{
+        display: flex;
+        align-items: center;
+        font-size: .8rem;
+    }
+
+    .authorDetails{
+        margin-top: .3rem;
+        font-size: .8rem;
+    }
+
+    .author{
+        color: red;
+        font-weight: 700;
+
+    }
+}

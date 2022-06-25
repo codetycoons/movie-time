@@ -1,0 +1,31 @@
+.Header{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #000;
+    color: red;
+    height: 65px;
+    padding : 0 2%;
+    box-sizing: border-box;
+
+    .wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo{
+        margin-left: 3rem;
+        height: 40px;
+        cursor: pointer;
+    }
+
+    .hamburger{
+        color: white;
+    }
+
+    .search{
+        color:gray;
+    }
+}
