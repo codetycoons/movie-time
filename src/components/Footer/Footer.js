@@ -3,8 +3,12 @@ import classes from "./Footer.module.scss";
 import logo from "../../assests/logo.png";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import CopyrightIcon from "@mui/icons-material/Copyright";
-
+import ExitToAppIcon from "@mui/icons-material/ExitToApp";
+import { useAuth } from "../../lib/auth";
+import { useNavigate } from "react-router-dom";
 function Footer() {
+  const { logoutUser, getUser } = useAuth();
+  const navigate = useNavigate();
   return (
     <div className={classes.Footer}>
       <div>
@@ -27,6 +31,17 @@ function Footer() {
         <span>Made by</span>&nbsp;
         <span className={classes.author}>Sanket Zende</span>
       </div>
+      {getUser() && (
+        <div
+          className={classes.logout}
+          onClick={() => {
+            logoutUser();
+            navigate("/");
+          }}
+        >
+          <ExitToAppIcon /> <span>Logout</span>
+        </div>
+      )}
     </div>
   );
 }

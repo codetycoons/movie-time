@@ -13,7 +13,13 @@ function MovieTrailer({ trailers = [], title }) {
       <div className={classes.trailer}>
         {trailers.map((el, index) => {
           const trailerSrc = url[sites["site"]];
-          return <iframe src={`${trailerSrc}${el.key}`} title={el.name} />;
+          return (
+            <iframe
+              key={index}
+              src={`${trailerSrc}${el.key}`}
+              title={el.name}
+            />
+          );
         })}
       </div>
     </div>

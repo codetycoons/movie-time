@@ -1,5 +1,4 @@
 import { styled } from "@mui/material/styles";
-import { useEffect, useState } from "react";
 import logo from "../../assests/logo.png";
 import classes from "./style.module.scss";
 
@@ -26,13 +25,6 @@ const Wrapper = styled("div")(({ theme }) => ({
 }));
 
 function Loader({ isLoading }) {
-  // const [isLoading, setLoading] = useState(true);
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setLoading(!isLoading);
-  //   }, 4000);
-  // }, []);
-
   if (!isLoading) return;
   return (
     <Container>

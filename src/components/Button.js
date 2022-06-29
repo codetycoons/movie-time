@@ -3,13 +3,15 @@ import Button from "@mui/material/Button";
 import { ThemeProvider } from "@mui/material/styles";
 
 export default function ButtonComponent({
-  text,
-  variant,
-  icon,
-  size,
-  theme,
-  color,
+  text = "",
+  variant = "",
+  icon = "",
+  size = "medium",
+  theme = {},
+  color = "",
   onClick,
+  style,
+  classes,
 }) {
   return (
     <ThemeProvider theme={theme}>
@@ -19,6 +21,8 @@ export default function ButtonComponent({
         size={size}
         color={color}
         onClick={onClick}
+        style={style}
+        className={classes}
       >
         {text}
       </Button>

@@ -1,5 +1,5 @@
 import MovieList from "../../../components/MovieList/MovieList";
-import { FetchOtherMovieList } from "../../../features/auth/app";
+import { FetchOtherMovieList } from "../../../features/Home/api/app";
 import { FetchParallelMovieList } from "../../../hooks/useFetchMovieList";
 
 function HomepageMovieCategoryList() {

@@ -1,4 +1,4 @@
-import { request } from "../../utils";
+import { request } from "../../../utils";
 
 export const FetchTrendingMovieList = (category) => {
   return request({
@@ -26,16 +26,8 @@ export const FetchOtherMovieList = (category) => {
   });
 };
 
-export const FetchMovieDetails = (id, category) => {
+export const FetchSearchMoviesList = (string) => {
   return request({
-    url: `movie/${id}${category ? "/" + category : ""}?api_key=${
-      process.env.REACT_APP_TMDB_API_KEY
-    }&language=en-US`,
-  });
-};
-
-export const FetchMovieMoreDetails = (id, category) => {
-  return request({
-    url: `movie/${category}?api_key=${process.env.REACT_APP_TMDB_API_KEY}&language=en-US&page=1&include_adult=false`,
+    url: `search/multi?api_key=${process.env.REACT_APP_TMDB_API_KEY}&language=en-US&query=${string}&page=1&include_adult=false`,
   });
 };

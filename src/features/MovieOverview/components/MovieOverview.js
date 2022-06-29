@@ -1,12 +1,12 @@
-import { useFetchMovieDetails } from "../../hooks/useFetchMovieDetail";
-import { FetchMovieDetails } from "../auth/app";
+import { useFetchMovieDetails } from "../../../hooks/useFetchMovieDetail";
+import { FetchMovieDetails } from "../api/app";
 import { useParams } from "react-router-dom";
-import CarouselComponent from "../../components/Carousel/Carousel";
-import { CarouselItem } from "../../components/Carousel/CarouselItem";
-import MovieList from "../../components/MovieList/MovieList";
+import CarouselComponent from "../../../components/Carousel/Carousel";
+import { CarouselItem } from "../../../components/Carousel/CarouselItem";
+import MovieList from "../../../components/MovieList/MovieList";
 import MovieTrailer from "./MovieTrailer";
 import MovieCast from "./MovieCast";
-import Loader from "../misc/Loader";
+import Loader from "../../misc/Loader";
 
 function MovieOverview() {
   const { movieId } = useParams();

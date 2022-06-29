@@ -1,0 +1,66 @@
+@import "../../../style/base";
+
+.Form{
+    background-color: black;
+    color: white;
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 23rem;
+    text-align: center;
+    padding: 4rem 3rem;
+
+    .title{
+        font-size: 2.5rem;
+        margin: 0 0 1rem 0;
+        text-align: left;
+    }
+
+    .auth{
+        margin-top: 5rem;
+    }
+    .error{
+        color: red;
+        font-size: .8rem;
+    }
+
+    input{
+        width: -webkit-fill-available;
+        background: #343434;
+        color: white;
+        outline: none;
+        padding: 1.2rem;
+        border: none;
+        border-radius: 5px;
+        margin-bottom:1.5rem;
+        font-size: 1rem;
+    }
+
+    .link{
+        text-align: left;
+        padding: .3rem;
+        a{
+            color: white;
+            font-size: .8rem;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        span{
+            color: #696666;
+        }
+    }
+   
+    
+}
+
+@include respond-to("xsmall"){
+    .Form{
+        width: 20rem;
+        padding: 4rem 2rem;
+    }
+}

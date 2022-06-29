@@ -1,5 +1,5 @@
 import classes from "./MovieOverview.module.scss";
-import { THUMBNAIL_IMAGE_CDN } from "../../utils";
+import { THUMBNAIL_IMAGE_CDN } from "../../../utils";
 function MovieCast({ cast = [], title }) {
   return (
     <div className={classes.Wrapper}>

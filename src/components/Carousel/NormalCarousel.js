@@ -5,6 +5,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import SwiperCore, { Pagination, Navigation } from "swiper";
+import "./swiper.scss";
 SwiperCore.use([Pagination, Navigation]);
 
 function NormalCarousel({ items, Item, redirect = "" }) {
@@ -12,17 +13,26 @@ function NormalCarousel({ items, Item, redirect = "" }) {
   return (
     <Swiper
       slidesPerView={6}
-      // spaceBetween={10}
+      spaceBetween={10}
       loop={false}
       loopFillGroupWithBlank={true}
       navigation={true}
+      pagination={false}
       breakpoints={{
-        500: {
+        350: {
           slidesPerView: 1,
           spaceBetween: 10,
         },
-        640: {
+        390: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        500: {
           slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        640: {
+          slidesPerView: 3,
           spaceBetween: 10,
         },
         768: {
@@ -37,6 +47,7 @@ function NormalCarousel({ items, Item, redirect = "" }) {
           slidesPerView: 6,
         },
       }}
+      className="mySwiper"
     >
       {items.map((item, i) => {
         return (

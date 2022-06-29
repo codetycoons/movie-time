@@ -6,3 +6,9 @@
     width: 0px;
   }
   
+
+  .MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation16.MuiDrawer-paper.MuiDrawer-paperAnchorLeft.css-4t3x6l-MuiPaper-root-MuiDrawer-paper{
+    background: rgb(16, 16, 16);
+    color: gray;
+    height: 100vh;
+  }

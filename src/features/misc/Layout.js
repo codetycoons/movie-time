@@ -2,7 +2,7 @@ import React from "react";
 import HomepageCarousel from "../Home/components/HomepageCarousel";
 import HomepageMovieCategoryList from "../Home/components/HomepageMovieCategoryList";
 import { FetchMovieList } from "../../hooks/useFetchMovieList";
-import { FetchTrendingMovieList } from "../../features/auth/app";
+import { FetchTrendingMovieList } from "../../features/Home/api/app";
 import Loader from "./Loader";
 
 function Layout() {

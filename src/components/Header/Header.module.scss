@@ -1,3 +1,5 @@
+@import "../../style/base";
+
 .Header{
     position: relative;
     display: flex;
@@ -8,11 +10,13 @@
     height: 65px;
     padding : 0 2%;
     box-sizing: border-box;
+    z-index: 1;
 
     .wrapper{
         display: flex;
         align-items: center;
         justify-content: space-between;
+        width: 100%;
     }
 
     .logo{
@@ -23,9 +27,35 @@
 
     .hamburger{
         color: white;
+        width: 1%;
     }
 
     .search{
         color:gray;
+    }
+}
+
+.desktopLogo{
+    display: block;
+}
+
+.mobileLogo{
+    display: none;
+}
+
+@include respond-to("medium"){
+    // .desktopLogo{
+    //     display: none;
+    // }
+    
+    // .mobileLogo{
+    //     display: block;
+    // }
+    .logo{
+        margin-left: 0rem !important;
+    }
+
+    .hamburger{
+        width: 10% !important;
     }
 }
