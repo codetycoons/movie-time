@@ -1,0 +1,35 @@
+.Wrapper{
+    background-color: black;
+    color:white;
+    padding: 1rem ;
+    position: relative;
+
+    .trailer{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        iframe{
+            margin: .5rem;
+        }
+    }
+
+    .cast{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        img{
+            border-radius: 50%;
+            height: 150px;
+            width: 150px;
+            margin: .5rem;
+        }
+    }
+}
+
+.category{
+    padding: .5rem;
+    border-left: 10px solid red;
+    font-size: 2rem;
+}

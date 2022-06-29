@@ -1,0 +1,204 @@
+@import "../../style/base";
+
+.zoomIn{
+    -webkit-animation-name: zoomIn;
+    animation-name: zoomIn;
+}
+
+.animated {
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@keyframes zoomIn{
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.3,.3,.3);
+        transform: scale3d(.3,.3,.3);
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+
+@keyframes fadeInUp{
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0,100%,0);
+        transform: translate3d(0,100%,0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+}
+
+
+.Landing{
+    margin-top: -100px;
+    background-size: cover;
+    overflow-x: hidden;
+    background-position: 50%;
+    min-height: 800px;
+    background: rgb(48, 48, 48);
+    
+    .banner{
+        min-height: 800px;
+        position: relative;
+    }
+
+    .container{
+        background-color: black;
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        justify-content: space-evenly;
+        color: white;
+        height: 500px;
+        margin-bottom: .4rem;
+        
+
+        .title{
+            font-size: 3.5rem;
+        }
+
+        .subtitle{
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        .text{
+            width: 40%;
+        }
+
+        .poster img{
+            width: 500px;
+            height: 300px;
+            -webkit-transition: all .7s;
+            transition: all .7s;
+        }
+    }
+
+    .reverse{
+        flex-direction: row;
+    }
+
+    .mainarea{
+        color: white;
+        position: absolute;
+        top: 60%;
+        transform: translate(0%, -50%);
+        left: 0;
+        right: 0;
+        margin: auto;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        text-align: center;
+
+        .title{
+            font-size: 4rem;
+        }
+    }
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    margin-top: 4rem;
+    
+    input{
+         padding: 1.8rem;
+         border: none;
+         outline: none;
+         width: 60%;
+    }
+}
+
+.tryfree{
+    width: 30% !important; 
+    padding: 1rem !important; 
+    font-size: 1.5rem !important;
+}
+
+
+
+@include respond-to("xlarge"){
+    .mainarea{
+        width: 60% !important;
+    }
+}
+
+@include respond-to("large"){
+    .mainarea{
+        width: 75% !important;
+    }
+}
+
+@include respond-to("medium"){
+    .container{
+        flex-direction: column !important ;
+        height: auto !important;
+    }
+
+    .mainarea{
+        width: 90% !important;
+
+        .title{
+            font-size: 3rem !important;
+        }
+    }
+
+    .text{
+        width: 80% !important;
+    }
+    .poster img{
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .search{
+        flex-direction: column;
+        input{
+            margin-bottom: 2rem;
+        }
+    }
+
+    .tryfree{
+        width: 50% !important;
+    }
+}
+
+@include respond-to("small"){
+    .reverse{
+        flex-direction: column-reverse !important;
+    }
+
+    .mainarea{
+        width: 90% !important;
+    }
+}
+
+@include respond-to("xsmall"){
+
+    .mainarea{
+        
+
+        .title{
+            font-size: 2.5rem !important;
+        }
+    }
+
+    .tryfree{
+        width: 70% !important;
+    }
+}

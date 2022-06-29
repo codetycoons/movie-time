@@ -1,0 +1,79 @@
+@import "../../style/base";
+
+.Carousel{
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 40%, rgba(0, 0, 0, 0) 60%);
+    opacity: 1;
+    transition: opacity 1000ms ease 0s;
+}
+
+.Item{
+    height: 750px;
+    width: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    color: #fff;
+    z-index: 0;
+    box-shadow: inset 0 11px 0 -10px #0d0d0d, inset 0 -70px 50px -10px #0d0d0d;
+    
+    .wrapper{
+        // width: 30%;
+        // position: absolute;
+        // top: 30% !important;
+        // left: 5% !important;
+        // -webkit-transform: translateY(-50%);
+        // -ms-transform: translateY(-50%);
+        // transform: translateY(-50%);
+        // margin-left: auto!important;
+        // margin-right: auto!important;
+
+        color: white;
+        position: absolute;
+        top: 50%;
+        transform: translate(0%, -50%);
+        left: 5%;
+        // right: 0;
+        margin: auto;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+        
+
+        .rating{
+            display: flex;
+            align-items: center;
+            img{
+                height: 20px;
+                margin-right: .5rem;
+            }
+        }
+    }
+}
+
+@include respond-to("medium"){
+    .Item{
+        .wrapper{
+             right: 0;
+             width: 60%;
+        }
+    }
+}
+
+@include respond-to("small"){
+    .Item{
+        .wrapper{
+             right: 0;
+             width: 70%;
+        }
+    }
+}
+
+@include respond-to("xsmall"){
+    .Item{
+        .wrapper{
+             right: 0;
+             width: 90%;
+        }
+    }
+}

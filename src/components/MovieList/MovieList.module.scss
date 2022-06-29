@@ -1,0 +1,45 @@
+.MovieList{
+    background-color: black;
+    color:white;
+    padding: 1rem ;
+    position: relative;
+    .category{
+        padding: .5rem;
+        border-left: 10px solid red;
+        font-size: 2rem;
+    }
+}
+
+.MovieCard{
+    margin: 0 .2rem;
+    transition: all .3s linear;
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    height: 100%;
+   
+
+    .poster{
+        // height: 180px;
+        // width: -webkit-fill-available;
+    }
+
+    .playIcon{
+        display: none;
+        position: absolute;
+        top: 50% !important;
+        left: 40% !important;
+        transform: translate(0%, -50%);
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
+
+    &:hover{
+        transform: scale(1.2);
+        filter: brightness(.7);
+        z-index: 2;
+        .playIcon{
+            display: block;
+        }
+    }
+}
