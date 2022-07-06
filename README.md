@@ -77,6 +77,7 @@ List of major frameworks used in building the project. including Add-ons/plugins
 - [Material-UI](https://www.npmjs.com/package/@material-ui/core)
 - [Axios](https://www.npmjs.com/package/axios)
 - [TMDb](https://www.themoviedb.org/)
+- [react-query](https://react-query.tanstack.com/)
 
 
 
