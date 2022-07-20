@@ -10,7 +10,7 @@ export default function SimpleAccordion() {
     {
       title: "What is MovieTime?",
       subtitle:
-        "MovieTime is a free movies and web-series streaming application created by Amol Dalwai. It fetches latest movies and web-series from various torrent websites and streaming platform.",
+        "MovieTime is a free movies and web-series streaming application created by Sanket Zende. It fetches latest movies and web-series from various torrent websites and streaming platform.",
     },
     {
       title: "How much does MovieTime cost?",
